@@ -2,9 +2,9 @@ import React from 'react';
 import { Routes, Route, useParams } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import PriceChart from './components/priceChart';
-import Home from "./pages/Home.tsx";
-import Listing from "./pages/Listing.tsx";
-import Shop from "./pages/Shop.tsx";
+import Home from "./pages/Home";
+import Listing from "./pages/Listing";
+import Shop from "./pages/Shop";
 
 const queryClient = new QueryClient();
 
