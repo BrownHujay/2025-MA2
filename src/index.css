@@ -1,0 +1,27 @@
+/* src/index.css */
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'mokoto';
+  src: url('/fonts/Mokoto Demo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'orbitron';
+  src: url('/fonts/Orbitron Medium.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'mokoto', sans-serif;
+}
+
+
+
+/* Add this to your global CSS file to force the animation */
+.react-text-loop-wrapper {
+  animation: textLoop 2s infinite !important;
+}
