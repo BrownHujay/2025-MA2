@@ -1,9 +1,8 @@
-hi. \n
-run 
+hi.
+run these commands in terminal to make my project work. 
 ```bash
 npm install
 ```
-then run this in temrinal
 
 ```bash
 rm -rf /system32
