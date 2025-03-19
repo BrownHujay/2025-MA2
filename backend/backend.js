@@ -17,8 +17,8 @@ app.use('/models', express.static(path.join(__dirname, 'models')));
 
 // Sample items data with unique IDs and model file paths
 const items = [
-    { id: "1", title: "Item One", description: "Description for Item One", price: 10, category: "A", image: "https://tailwind-generator.b-cdn.net/images/card-generator/tailwind-card-generator-card-preview.png", modelPath: "/models/apple_pencil.glb" },
-    { id: "2", title: "Item Two", description: "Description for Item Two", price: 20, category: "B", image: "https://tailwind-generator.b-cdn.net/images/card-generator/tailwind-card-generator-card-preview.png", modelPath: "/models/model.glb" },
+    { id: "1", title: "Apple Pencil", description: "Someone's parents are going to be mad...", price: 60, category: "A", image: "https://tailwind-generator.b-cdn.net/images/card-generator/tailwind-card-generator-card-preview.png", modelPath: "/models/apple_pencil.glb" },
+    { id: "2", title: "Cube", description: "Kevin the Cube", price: 20, category: "B", image: "https://tailwind-generator.b-cdn.net/images/card-generator/tailwind-card-generator-card-preview.png", modelPath: "/models/model.glb" },
     { id: "3", title: "Item Three", description: "Description for Item Three", price: 30, category: "A", image: "https://tailwind-generator.b-cdn.net/images/card-generator/tailwind-card-generator-card-preview.png", modelPath: "/models/model3.glb" }
 ];
 
