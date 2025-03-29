@@ -72,10 +72,10 @@ const SlideTabs = () => {
       className="relative flex flex-col w-full text-right p-1"
     >
       <Tab setPosition={setPosition} setIsHovered={setIsHovered} r={"/"}>Home</Tab>
-      <Tab setPosition={setPosition} setIsHovered={setIsHovered} r={"/shop"}>Auctions</Tab>
-      <Tab setPosition={setPosition} setIsHovered={setIsHovered} r={"/upcoming"}>Upcoming Drops</Tab>
-      <Tab setPosition={setPosition} setIsHovered={setIsHovered} r={"/sell"}>Selling</Tab>
-      <Tab setPosition={setPosition} setIsHovered={setIsHovered} r={"/account"}>Account</Tab>
+      <Tab setPosition={setPosition} setIsHovered={setIsHovered} r={"/shop"}>Buy</Tab>
+      <Tab setPosition={setPosition} setIsHovered={setIsHovered} r={"/"}>Upcoming Drops</Tab>
+      <Tab setPosition={setPosition} setIsHovered={setIsHovered} r={"/"}>Selling</Tab>
+      <Tab setPosition={setPosition} setIsHovered={setIsHovered} r={"/"}>Account</Tab>
 
       {/* Render Cursor only when a Tab is hovered */}
       {isHovered && <Cursor position={position} />}

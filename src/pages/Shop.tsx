@@ -117,7 +117,7 @@ export default function Shop() {
                                 onClick={() => navigate(`/listing/${item.id}`, { state: { item } })}
                     >
                     <figure className="flex items-center justify-center h-64 overflow-hidden rounded-t-2xl">
-                        <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                        <img src={`http://localhost:3000${item.image}`} alt={item.title} className="w-full h-full object-cover" />
                     </figure>
                     <div className="flex flex-col p-8">
                         <div className="text-2xl font-bold text-white pb-6">{item.title}</div>
@@ -130,7 +130,7 @@ export default function Shop() {
                                         hover:bg-slate-500/50 active:scale-95 transition-transform"
                             onClick={(e) => { 
                                 e.stopPropagation(); 
-                                window.location.href = "/pricing/";
+                                window.location.href = "/checkout/" + item.id;
                             }}
                             >
                             {item.price}

@@ -1,11 +1,9 @@
 import { useState, useEffect, Suspense, useRef } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { useGLTF, useAnimations, OrbitControls } from '@react-three/drei';
-import { MeshPhysicalMaterial, Mesh, MeshStandardMaterial, Object3D } from 'three';
-import { motion } from "framer-motion";
 import Navbar from "../components/navbar";
 import { ChartNoAxesCombined } from "lucide-react";
-import { useParams, useNavigate } from "react-router-dom";
+
 
 interface ItemData {
     modelURL: string;
@@ -30,27 +28,6 @@ const Model = ({ url }: { url: string }) => {
             
         }
     }, [scene, camera]);
-
-    useEffect(() => {
-        if (scene) {
-            scene.traverse((child: Object3D) => {
-                if (child instanceof Mesh) {
-                    const mesh = child as Mesh;
-                    const material = mesh.material;
-                    if (material instanceof MeshStandardMaterial) {
-                        const newMaterial = new MeshPhysicalMaterial({
-                            color: material.color,
-                            metalness: material.metalness,
-                            roughness: material.roughness,
-                            clearcoat: 1,
-                            clearcoatRoughness: 0,
-                        });
-                        mesh.material = newMaterial;
-                    }
-                }
-            });
-        }
-    }, [scene]);
 
     // If animations are available, play the first one.
     useEffect(() => {
@@ -116,7 +93,7 @@ export default function Listing(props: { id: number }) {
                     <Canvas>
                     <ambientLight intensity={1} />
                     <pointLight position={[0, 1, 0]} intensity={10} />
-                    <directionalLight position={[0, 2, 0]} intensity={10}/>
+                    <directionalLight position={[0, -2, 0]} intensity={10}/>
                         <Suspense fallback={null}>
                             <Model url={itemData.modelURL} />
                         </Suspense>
@@ -145,7 +122,7 @@ export default function Listing(props: { id: number }) {
                                                     hover:bg-slate-500/50 active:scale-95 transition-transform"
                                         onClick={(e) => { 
                                             e.stopPropagation(); 
-                                            window.location.href = "/pricing/";
+                                            window.location.href = "/checkout/" + itemData.id;
                                         }}
                                         >
                                         {itemData.price}
